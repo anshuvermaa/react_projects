@@ -1,0 +1,21 @@
+.box{
+    position:relative;
+}
+.comp{ 
+    position:absolute;
+    right:0;
+
+}
+.fa-solid, .fas {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 0px;
+    opacity: 0%;
+}
+
+.box:hover .fa-solid, .fas{
+    opacity: 100%;
+
+
+}

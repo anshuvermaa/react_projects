@@ -1,0 +1,133 @@
+.todo-edit input:focus {
+    outline: none;
+}
+.todo{
+    display:flex;
+    margin:0 -3rem 4px;
+    padding:1.1rem 3rem;
+    justify-content:space-between;
+    align-items: center;
+    background:rgba(255,255,255,0.1)
+}
+
+
+
+.completed{
+    opacity: 0.6;
+}
+
+.todo-task.completed:before{
+    color:greenyellow;
+    content:"";
+    position: absolute;
+    top:50%;
+    left:-0.5rem;
+    display: block;
+    width: 0%;
+    height: 1px;
+    background:rgb(255, 255, 255);
+    animation: spin .5s ease-out 0s forwards;
+}
+
+
+
+@keyframes mymove{
+    to {
+
+        width: calc(200% +1rem);
+    }
+}
+
+.todo-buttons{
+    flex-shrink:0;
+    padding-left: 0.7em;
+}
+
+.todo-buttons button {
+    border:none;
+    font-size:1rem;
+    margin:0.4em;
+    background: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color:#fff
+
+}
+.todo-edit{
+    display:flex;
+    flex-wrap: wrap;
+}
+.todo-edit input{
+    flex-grow: 1;border: none;
+    background: #f7f1f1;
+    padding:0.5em;
+    font-size:initial;
+
+}
+.todo-edit button{
+    padding: 0 1.3em;
+    border: none;
+    background: #ff6666;color: #fff;
+    text-transform: Uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background .2s ease-out
+}
+.todo-edit button:hover{
+    background: #ff5e5e
+
+
+}
+.todo-edit input,
+.todo-edit{
+    font-family:"Quicksand", sans-serif;
+    height:3rem;
+    border-radius: 4px;
+}
+.btf {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  
+  .btf {
+    position: relative;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    
+    height: 4em;
+    width: 7em;
+    
+    border: none;
+    border-top: 3px solid orange;
+    border-radius: 0 0 0.2em 0.2em;
+    color: #fff;
+    font-size: .5em;
+    transform-origin: 50% 5em;
+  }
